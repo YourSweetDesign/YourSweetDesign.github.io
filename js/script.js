@@ -59,11 +59,12 @@ $(function () {
     const onClickNav = (evt) => {
         const target = evt.target;
         if (target && target.getAttribute('data-filter') == 'website' && count < 1) {
-            createElementCard('website');
+            createElementCard('website','img/landingZaglushka.jpg');
+            createElementCard('website','img/landingZaglushka1.jpg');
             count = +1;
         }
         if (target && target.getAttribute('data-filter') == 'interaction' && count2 < 1) {
-            createElementCard('interaction');
+            createElementCard('interaction','img/landingZaglushka.jpg');
             count2 = +1;
         }
         if (target && target.getAttribute('data-filter') == 'all' || target.getAttribute('data-filter') == 'logo') {
@@ -80,13 +81,13 @@ $(function () {
     workNav.addEventListener('click', onClickNav);
 
 
-    const createElementCard = (category) => {
+    const createElementCard = (category,img) => {
         const element = document.createElement('div');
         element.classList.add('portfolio__col');
         element.setAttribute('data-cat', category);
         element.innerHTML =
             ` <div class="work">
-        <img class="work__image" src="img/landingZaglushka.jpg" alt="example of design">
+        <img class="work__image" src="${img}" alt="example of design">
         <div class="work__content">
           <div class="work__cat">category: ${category}</div>
           <div class="work__title">
