@@ -267,10 +267,6 @@ p {
   height: 100%;
 }
 
-.nav__link:nth-child(3)::after {
-  bottom: 3px;
-}
-
 .nav__link {
   margin-left: 2rem;
   position: relative;
@@ -1424,6 +1420,10 @@ p {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+  }
+
+  .nav__link:nth-child(3)::after {
+    bottom: 3px;
   }
 
   .nav__link {
